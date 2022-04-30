@@ -364,15 +364,6 @@ class SettingView(arcade.View):
         self.manager.disable()
 
 
-def random_line(file):
-    line = next(file)
-    for num, aline in enumerate(file, 2):
-        if random.randrange(num):
-            continue
-        line = aline
-    return line
-
-
 def main():
     window = arcade.Window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE)
     menu_view = MenuView()
