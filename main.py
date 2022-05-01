@@ -89,6 +89,10 @@ class MenuView(arcade.View):
                 child=self.v_box)
         )
 
+    def on_show(self):
+        """ Called when switching to this view"""
+        pass
+
     def on_draw(self):
         self.clear()
         self.manager.draw()
@@ -257,7 +261,7 @@ class GameView(arcade.View):
         elif player == "player2":
             self.player2_move_count_num.text = str(int(self.player1_move_count_num.text) + 1)
 
-    def inc_move_counter_clear(self, player):
+    def clear_move_counter(self, player):
         """
         Clears the move counter for target player.
 
@@ -372,7 +376,7 @@ def main():
     # game_stats = GameView()
     # Here are some function examples:
     # game_stats.inc_move_counter("player1")
-    # game_stats.inc_move_counter_clear("player1")
+    # game_stats.clear_move_counter("player1")
     # game_stats.get_move_counter("player1")
     # game_stats.set_latest_move("player1", "Up")
 
